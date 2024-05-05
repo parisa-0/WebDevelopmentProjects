@@ -4,19 +4,12 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
-  <servlet>
-    <servlet-name>URIController</servlet-name>
-    <servlet-class>myapp.mvc.control.URIController</servlet-class>
-    <init-param>
-      <param-name>config</param-name>
-      <param-value>
-        /WEB-INF/commandHandler.properties
-      </param-value>
-    </init-param>
-  </servlet>
-
+<servlet>
+  <servlet-name>HelloServlet</servlet-name>
+  <servlet-class>com.example.HelloServlet</servlet-class>
+</servlet>
   <servlet-mapping>
-    <servlet-name>URIController</servlet-name>
-    <url-pattern>*.do</url-pattern>
+    <servlet-name>HelloServlet</servlet-name>
+    <url-pattern>/salam</url-pattern>
   </servlet-mapping>
 </web-app>

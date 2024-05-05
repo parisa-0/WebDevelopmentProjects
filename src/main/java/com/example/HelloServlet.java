@@ -7,21 +7,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "HelloServlet", urlPatterns = {"/hello"})
+@WebServlet(name = "HelloServlet", urlPatterns = {"/salam"})
 public class HelloServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        response.getWriter().println("<h1>Hello, World!</h1>");
+        response.getWriter().println("<h1>Salam!</h1>");
     }
 
-    @WebServlet(name = "HelloServlet", urlPatterns = {"/salam"})
-    public class SalamServlet extends HttpServlet {
-        @Override
-        protected void doGet(HttpServletRequest request, HttpServletResponse response)
-                throws ServletException, IOException {
-            response.setContentType("text/html;charset=UTF-8");
-            response.getWriter().println("<h1>Salam!</h1>");
-        }
 }
